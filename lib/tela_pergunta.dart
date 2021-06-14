@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'tela_nao_passou.dart';
 import 'tela_nome.dart';
 import 'tela_passou.dart';
@@ -20,6 +22,8 @@ class MyApp extends StatelessWidget {
 
 Dados dados = new Dados();
 double percentual = 0.5;
+
+Color w = Color(0xffffffff);
 
 double percentual2 = 50.0;
 String percentTela = "50.0";
@@ -44,7 +48,6 @@ int indicepergunta = 0;
 
 mudaResp() {
   indicepergunta = indicepergunta + 1;
-
   indiceresp01 = indiceresp01 + 3;
   indiceresp02 = indiceresp02 + 3;
   indiceresp03 = indiceresp03 + 3;
@@ -102,12 +105,22 @@ class _TelaPerguntaState extends State<TelaPergunta> {
         child: Container(
           width: MediaQuery.of(context).size.width,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 width: MediaQuery.of(context).size.width * .8,
                 height: MediaQuery.of(context).size.height * .1,
                 margin: new EdgeInsets.symmetric(vertical: 35.0),
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 5,
+                      blurRadius: 15,
+                      offset: Offset(0, 5), // changes position of shadow
+                    ),
+                  ],
                   color: Colors.white,
                   borderRadius: const BorderRadius.all(
                     const Radius.circular(25.0),
@@ -136,6 +149,17 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                   Container(
                     margin: EdgeInsets.only(top: 10),
                     width: MediaQuery.of(context).size.width * .8,
+                    height: MediaQuery.of(context).size.width * .1,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 5,
+                          blurRadius: 15,
+                          offset: Offset(0, 5), // changes position of shadow
+                        ),
+                      ],
+                    ),
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -147,7 +171,7 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                           fontSize: 17,
                         ),
                       ),
-                      color: Colors.white,
+                      color: w,
                       elevation: 5.0,
                       splashColor: Colors.purple,
                       onPressed: () {
@@ -162,6 +186,16 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                     margin: EdgeInsets.only(top: 10),
                     width: MediaQuery.of(context).size.width * .8,
                     height: MediaQuery.of(context).size.width * .1,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 5,
+                          blurRadius: 15,
+                          offset: Offset(0, 5), // changes position of shadow
+                        ),
+                      ],
+                    ),
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -173,7 +207,7 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                           fontSize: 17,
                         ),
                       ),
-                      color: Colors.white,
+                      color: w,
                       elevation: 5.0,
                       splashColor: Colors.purple,
                       onPressed: () {
@@ -188,6 +222,16 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                     margin: EdgeInsets.only(top: 10),
                     width: MediaQuery.of(context).size.width * .8,
                     height: MediaQuery.of(context).size.width * .1,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 5,
+                          blurRadius: 15,
+                          offset: Offset(0, 5), // changes position of shadow
+                        ),
+                      ],
+                    ),
                     child: RaisedButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0),
@@ -199,7 +243,7 @@ class _TelaPerguntaState extends State<TelaPergunta> {
                           fontSize: 17,
                         ),
                       ),
-                      color: Colors.white,
+                      color: w,
                       elevation: 5.0,
                       splashColor: Colors.purple,
                       onPressed: () {
@@ -214,8 +258,18 @@ class _TelaPerguntaState extends State<TelaPergunta> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 50),
-                width: MediaQuery.of(context).size.width * .8,
+                width: MediaQuery.of(context).size.width * .6,
                 alignment: Alignment(0.0, 0.8),
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 5,
+                      blurRadius: 15,
+                      offset: Offset(0, 5), // changes position of shadow
+                    ),
+                  ],
+                ),
                 child: LinearPercentIndicator(
                   //leaner progress bar
                   animation: true,

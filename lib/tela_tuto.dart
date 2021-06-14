@@ -1,3 +1,5 @@
+import 'package:contratame/tela_load.dart';
+
 import 'Dados.dart';
 import 'tela_pergunta.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +30,30 @@ class _TutoState extends State<Tuto> {
           height: MediaQuery.of(context).size.height,
           child: Stack(
             children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height * 0.3,
+                color: Colors.transparent,
+                child: Container(
+                  decoration: new BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        spreadRadius: 20,
+                        blurRadius: 15,
+                        offset: Offset(0, 8), // changes position of shadow
+                      ),
+                    ],
+                    color: Color(0xff8c54fb),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: const Radius.circular(60),
+                      bottomRight: const Radius.circular(60),
+                    ),
+                  ),
+                ),
+              ),
               Align(
-                alignment: Alignment(0.0, -0.8),
+                alignment: Alignment(0.0, -0.7),
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
@@ -38,7 +62,7 @@ class _TutoState extends State<Tuto> {
                     style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'leaguespartan',
-                        fontSize: 32),
+                        fontSize: 35),
                   ),
                 ),
               ),
@@ -56,11 +80,10 @@ class _TutoState extends State<Tuto> {
                   width: MediaQuery.of(context).size.width * .6,
                   height: MediaQuery.of(context).size.height * .2,
                   decoration: BoxDecoration(
-                    color: Colors.purple[300],
+                    color: Colors.purple[800],
                     borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(60),
-                      bottomRight: Radius.circular(30),
-                      topLeft: Radius.circular(5),
+                      bottomLeft: Radius.circular(90),
+                      bottomRight: Radius.circular(60),
                       topRight: Radius.circular(30),
                     ),
                     boxShadow: [
@@ -119,7 +142,7 @@ class _TutoState extends State<Tuto> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => TelaPergunta(),
+                                  builder: (context) => Loading(),
                                 ),
                               );
                             }

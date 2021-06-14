@@ -7,7 +7,7 @@ class Dados {
     "Boas vindas $nome, me chamo Milena e serei a sua recrutadora virtual!",
     "Nossa entrevista será bem simples, apenas toque na resposta em que você acredita estar correta",
     "Abaixo você verá uma barra de progresso que indicará seu desempenho ao longo do processo",
-    "Vou realizar algumas perguntas e avaliar como voce irá se sair, vamos lá?",
+    "Vou realizar algumas perguntas e avaliar como você irá se sair, vamos lá?",
     "..."
   ];
 

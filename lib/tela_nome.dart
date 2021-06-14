@@ -1,3 +1,6 @@
+import 'package:contratame/tela_load.dart';
+import 'package:contratame/tela_pergunta.dart';
+
 import 'tela_tuto.dart';
 import 'package:flutter/material.dart';
 
@@ -129,7 +132,7 @@ class PaginaNome extends StatelessWidget {
                     nome = nomeController.text;
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (nome) => Tuto()),
+                      MaterialPageRoute(builder: (nome) => (Tuto())),
                     );
                   },
                 ),
